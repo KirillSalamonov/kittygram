@@ -6,7 +6,7 @@ from .models import Cat
 from .serializers import CatSerializer
 
 
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'POST', 'PATCH'])
 def cat_list(request):
     if request.method == 'POST':
         serializer = CatSerializer(data=request.data)
